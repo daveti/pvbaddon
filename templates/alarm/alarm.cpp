@@ -267,7 +267,7 @@ int Alarm::maxCount()
   return max_alarms;
 }
 
-static const char *HTML_HEADER = 
+static const char *HTML_HEADER_STRING = 
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><head><body";
 static const char *HTML_TRAILER = 
 "</body></html>";
@@ -278,7 +278,7 @@ int Alarm::updateWidgetHTML(PARAM *p, int id, int *state)
   {
     if(*state > 1) return 0; // no update needed already green
     *state = 2;
-    rlString html(HTML_HEADER);
+    rlString html(HTML_HEADER_STRING);
     html += " style=\"background-color:#DDDDDD\">";
     html += "<p>No Alarms</p>";
     html += HTML_TRAILER;
@@ -288,7 +288,7 @@ int Alarm::updateWidgetHTML(PARAM *p, int id, int *state)
   {
     if(*state == 0) *state = 1;
     else            *state = 0;
-    rlString html(HTML_HEADER);
+    rlString html(HTML_HEADER_STRING);
     rlString txt;
     //if(*state == 0) html += " style=\"background-color:#FF0000\">";
     //else            html += " style=\"background-color:#DD0000\">";

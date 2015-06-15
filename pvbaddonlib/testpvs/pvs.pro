@@ -19,17 +19,20 @@ SOURCES += main.cpp     \
            pvbsvgcalendar.cpp \
            mask1.cpp
 
+
 !macx {
 unix:LIBS          += /usr/lib/libpvsmt.so -lpthread
 #unix:LIBS         += /usr/lib/libpvsid.so
 unix:INCLUDEPATH   += /opt/pvb/pvserver
-unix:LIBS         += /usr/lib/librllib.so
+#unix:LIBS         += /usr/lib/librllib.so
 unix:INCLUDEPATH  += /opt/pvb/rllib/lib
 #unix:LIBS         += $(PVBDIR)/pvserver/libpvsmt.so -lpthread
 #unix:LIBS         += $(PVBDIR)/pvserver/libpvsid.so -lpthread
 #unix:INCLUDEPATH  += $(PVBDIR)/pvserver
-unix:LIBS         += $(PVBDIR)/rllib/lib/librllib.so
-unix:INCLUDEPATH  += $(PVBDIR)/rllib/lib
+#unix:LIBS         += $(PVBDIR)/rllib/lib/librllib.so
+#unix:INCLUDEPATH  += $(PVBDIR)/rllib/lib
+unix:LIBS         += /opt/pvb/rllib/lib/librllib.so
+unix:INCLUDEPATH  += /opt/pvb/rllib/lib
 }
 
 macx:LIBS          += /opt/pvb/pvserver/libpvsmt.a /usr/lib/libpthread.dylib

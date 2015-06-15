@@ -13,9 +13,10 @@ SOURCES     += modbus_client.cpp
 !macx {
 unix:LIBS         += -lpthread
 #unix:LIBS         += /usr/lib/librllib.so
-#unix:INCLUDEPATH  += /opt/pvb/rllib/lib
-unix:LIBS         += $(PVBDIR)/rllib/lib/librllib.so
-unix:INCLUDEPATH  += $(PVBDIR)/rllib/lib
+unix:LIBS	  += /opt/pvb/rllib/lib/librllib.so
+unix:INCLUDEPATH  += /opt/pvb/rllib/lib
+#unix:LIBS         += $(PVBDIR)/rllib/lib/librllib.so
+#unix:INCLUDEPATH  += $(PVBDIR)/rllib/lib
 }
 
 macx:LIBS         += /usr/lib/libpthread.dylib

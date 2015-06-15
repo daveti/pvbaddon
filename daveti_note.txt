@@ -1,0 +1,7 @@
+# To install this on Ubuntu 14.04 x86_64
+# besides the instruction from readme.txt
+# I have done below.
+# Jun 15, 2015
+# daveti
+ln -s /usr/include/libxml2/libxml /usr/include/libxml
+ln -s /usr/lib/x86_64-linux-gnu/qt5/bin/qmake /usr/bin/qmake-qt5

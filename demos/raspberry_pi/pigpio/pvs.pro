@@ -20,8 +20,8 @@ unix:LIBS          += /usr/lib/libpvsmt.so -lpthread
 unix:INCLUDEPATH   += /opt/pvb/pvserver
 unix:LIBS         += /usr/lib/librllib.so
 unix:INCLUDEPATH  += /opt/pvb/rllib/lib
-unix:LIBS         += /home/pi/git/wiringPi/wiringPi/libwiringPi.a
-unix:INCLUDEPATH  += /home/pi/git/wiringPi/wiringPi
+unix:LIBS         += /root/git/wiringPi/wiringPi/libwiringPi.so.2.25
+unix:INCLUDEPATH  += /root/git/wiringPi/wiringPi
 }
 
 macx:LIBS          += /opt/pvb/pvserver/libpvsmt.a /usr/lib/libpthread.dylib

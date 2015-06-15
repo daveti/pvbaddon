@@ -14,14 +14,18 @@ SOURCES += main.cpp     \
 
 !macx {
 #unix:LIBS         += /usr/lib/libpvsmt.so -lpthread
-unix:LIBS          += $(PVBDIR)/pvserver/libpvsmt.so -lpthread
+#unix:LIBS          += $(PVBDIR)/pvserver/libpvsmt.so -lpthread
+unix:LIBS          += /opt/pvb/pvserver/libpvsmt.so -lpthread
 #unix:LIBS         += /usr/lib/libpvsid.so
 #unix:INCLUDEPATH  += /opt/pvb/pvserver
 #unix:LIBS         += /usr/lib/librllib.so
 #unix:INCLUDEPATH  += /opt/pvb/rllib/lib
-unix:INCLUDEPATH   += $(PVBDIR)/pvserver
-unix:LIBS          += $(PVBDIR)/rllib/lib/librllib.so
-unix:INCLUDEPATH   += $(PVBDIR)/rllib/lib
+#unix:INCLUDEPATH   += $(PVBDIR)/pvserver
+#unix:LIBS          += $(PVBDIR)/rllib/lib/librllib.so
+#unix:INCLUDEPATH   += $(PVBDIR)/rllib/lib
+unix:INCLUDEPATH   += /opt/pvb/pvserver
+unix:LIBS          += /opt/pvb/rllib/lib/librllib.so
+unix:INCLUDEPATH   += /opt/pvb/rllib/lib
 }
 
 macx:LIBS          += /opt/pvb/pvserver/libpvsmt.a /usr/lib/libpthread.dylib
